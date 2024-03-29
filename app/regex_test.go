@@ -7,9 +7,6 @@ import (
 	. "github.com/smartystreets/goconvey/convey"
 )
 
-const LONG_REGEX string = `([a-zA-Z]+)\(([a-zA-Z 0-9]+)\)communicates\(([a-zA-Z 0-9]+)\)to\(\[(.*)\]\)$`
-const SHORT_REGEX string = `([a-zA-Z]+)\(([a-zA-Z 0-9]+)\)$`
-
 func TestRegexWithNoOptinalGroups(t *testing.T) {
 	Convey("Given a regex with multiple groups", t, func() {
 		r, _ := regexp.Compile(SHORT_REGEX)
